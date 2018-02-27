@@ -1,8 +1,10 @@
-# !/usr/bin/env python
+#!/usr/bin/env python
 import time
 import RPi.GPIO as GPIO
 import rospy
-from std_msgs.msg import Float32MultiArray
+from std_msgs.msg import Int32MultiArray
+from rospy.numpy_msg import numpy_msg
+import numpy as np
 GPIO.setmode(GPIO.BCM)
 
 # set the appropriate pin connections :
@@ -30,13 +32,12 @@ def readpos():
     time.sleep(delay*2)
     MSB()
     data = [0]*ns
-    
     for i in range(0,bitcount):
         if i<10:
             #print i
             clockup()
             for j in range(0,ns):
-                data[j]<<=1  
+                data[j]<<=1
                 data[j]|=GPIO.input(PIN_DAT[j])
             clockdown()
         else:
@@ -48,7 +49,7 @@ def readpos():
 
 
 def talker():
-    pub = rospy.Publisher('encoder_pos', Float32MultiArray, queue_size=1)
+    pub = rospy.Publisher('encoder_pos',Int32MultiArray, queue_size=10)
     rospy.init_node('encoder', anonymous=True)
     # pin setup done here
     try:
@@ -57,14 +58,15 @@ def talker():
         GPIO.setup(PIN_CS, GPIO.OUT)
         GPIO.output(PIN_CS, 1)
         GPIO.output(PIN_CLK, 1)
-        print "GPIO configuration enabled"
+        rospy.loginfo("GPIO configuration enabled")
     except:
-        print "ERROR. Unable to setup the configuration requested"
+        rospy.loginfo("ERROR. Unable to setup the configuration requested")
         # wait some time to start
     time.sleep(0.5)
     while not rospy.is_shutdown():
-        rospy.loginfo(readpos())
-        pub.publish(readpos())
+        a=readpos()
+	rospy.loginfo(str(a))
+	pub.publish(Int32MultiArray(data=a))
 
 
 if __name__ == '__main__' :

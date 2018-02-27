@@ -1,8 +1,8 @@
-# Install script for directory: /home/haresh/tensegros/src/encoder_pos
+# Install script for directory: /home/pi/tensegros/src/encoder_pos
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/haresh/tensegros/install")
+  set(CMAKE_INSTALL_PREFIX "/home/pi/tensegros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,18 +32,18 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/haresh/tensegros/build/encoder_pos/catkin_generated/installspace/encoder_pos.pc")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pi/tensegros/build/encoder_pos/catkin_generated/installspace/encoder_pos.pc")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/encoder_pos/cmake" TYPE FILE FILES
-    "/home/haresh/tensegros/build/encoder_pos/catkin_generated/installspace/encoder_posConfig.cmake"
-    "/home/haresh/tensegros/build/encoder_pos/catkin_generated/installspace/encoder_posConfig-version.cmake"
+    "/home/pi/tensegros/build/encoder_pos/catkin_generated/installspace/encoder_posConfig.cmake"
+    "/home/pi/tensegros/build/encoder_pos/catkin_generated/installspace/encoder_posConfig-version.cmake"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/encoder_pos" TYPE FILE FILES "/home/haresh/tensegros/src/encoder_pos/package.xml")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/encoder_pos" TYPE FILE FILES "/home/pi/tensegros/src/encoder_pos/package.xml")
 endif()
 

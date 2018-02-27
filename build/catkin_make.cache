@@ -1,2 +1,2 @@
 encoder_pos
--DCATKIN_DEVEL_PREFIX=/home/haresh/tensegros/devel -DCMAKE_INSTALL_PREFIX=/home/haresh/tensegros/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/pi/tensegros/devel -DCMAKE_INSTALL_PREFIX=/home/pi/tensegros/install -G Unix Makefiles
