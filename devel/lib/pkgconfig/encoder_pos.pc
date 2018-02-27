@@ -1,0 +1,8 @@
+prefix=/home/pi/tensegros/devel
+
+Name: encoder_pos
+Description: Description of encoder_pos
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/pi/tensegros/devel/lib 
+Requires: 
