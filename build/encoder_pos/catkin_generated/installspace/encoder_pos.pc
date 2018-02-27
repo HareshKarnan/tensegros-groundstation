@@ -1,8 +1,8 @@
-prefix=/home/pi/tensegros/install
+prefix=/home/haresh/tensegros/install
 
 Name: encoder_pos
 Description: Description of encoder_pos
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/pi/tensegros/install/lib 
+Libs: -L/home/haresh/tensegros/install/lib 
 Requires: 

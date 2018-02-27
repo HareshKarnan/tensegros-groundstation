@@ -7,7 +7,8 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/pi/tensegros/devel:$CMAKE_PREFIX_PATH"
-export PWD="/home/pi/tensegros/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/pi/tensegros/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/pi/tensegros/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/haresh/tensegros/devel:$CMAKE_PREFIX_PATH"
+export PATH="/opt/ros/kinetic/bin:/usr/local/MATLAB/R2017b/bin:/home/haresh/bin:/home/haresh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+export PWD="/home/haresh/tensegros/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/haresh/tensegros/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/haresh/tensegros/src:$ROS_PACKAGE_PATH"
