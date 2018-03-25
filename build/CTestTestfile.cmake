@@ -6,3 +6,5 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("encoder_pos")
+subdirs("motor_comms")
+subdirs("tenseg_control")

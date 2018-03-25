@@ -587,6 +587,42 @@ clean: encoder_pos/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory motor_comms
+
+# Convenience name for "all" pass in the directory.
+motor_comms/all:
+
+.PHONY : motor_comms/all
+
+# Convenience name for "clean" pass in the directory.
+motor_comms/clean:
+
+.PHONY : motor_comms/clean
+
+# Convenience name for "preinstall" pass in the directory.
+motor_comms/preinstall:
+
+.PHONY : motor_comms/preinstall
+
+#=============================================================================
+# Directory level rules for directory tenseg_control
+
+# Convenience name for "all" pass in the directory.
+tenseg_control/all:
+
+.PHONY : tenseg_control/all
+
+# Convenience name for "clean" pass in the directory.
+tenseg_control/clean:
+
+.PHONY : tenseg_control/clean
+
+# Convenience name for "preinstall" pass in the directory.
+tenseg_control/preinstall:
+
+.PHONY : tenseg_control/preinstall
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

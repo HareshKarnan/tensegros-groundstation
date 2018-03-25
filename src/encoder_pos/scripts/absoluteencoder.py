@@ -5,30 +5,32 @@ import rospy
 from std_msgs.msg import Int32MultiArray
 from rospy.numpy_msg import numpy_msg
 import numpy as np
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 
 # set the appropriate pin connections :
-PIN_CLK = 2
-PIN_DAT = [3,14]
-PIN_CS  = 4
-
+PIN_CLK = [11,16]
+PIN_DAT = [5,3,7,8,10,12]
+PIN_CS  = [13,18]
+offset = np.array([-38,283,-148,-138.86,-287.22,281])
+coeff = np.array([1,-1,1,1,1,-1])
+coeff = np.multiply(360.0/(1024.0),coeff)
 delay = 0.0000005
 
-ns = 2 # number of sensors attached
+ns = len(PIN_DAT) # number of sensors attached
 # totally 10 bits to be extracted from SSI signal
 bitcount = 16
 
 
 def clockup():
-    GPIO.output(PIN_CLK,1)
+    GPIO.output(PIN_CLK[:],1)
 def clockdown():
-    GPIO.output(PIN_CLK,0)
+    GPIO.output(PIN_CLK[:],0)
 def MSB():
     # Most Significant Bit
     clockdown()
 
 def readpos():
-    GPIO.output(PIN_CS,0)
+    GPIO.output(PIN_CS[:],0)
     time.sleep(delay*2)
     MSB()
     data = [0]*ns
@@ -44,8 +46,8 @@ def readpos():
             for k in range(0,6):
                 clockup()
                 clockdown()
-    GPIO.output(PIN_CS,1)
-    return data
+    GPIO.output(PIN_CS[:],1)
+    return np.add(np.multiply(coeff,data),offset).tolist()
 
 
 def talker():
@@ -53,11 +55,11 @@ def talker():
     rospy.init_node('encoder', anonymous=True)
     # pin setup done here
     try:
-        GPIO.setup(PIN_CLK, GPIO.OUT)
+        GPIO.setup(PIN_CLK[:], GPIO.OUT)
         GPIO.setup(PIN_DAT[:], GPIO.IN)
-        GPIO.setup(PIN_CS, GPIO.OUT)
-        GPIO.output(PIN_CS, 1)
-        GPIO.output(PIN_CLK, 1)
+        GPIO.setup(PIN_CS[:], GPIO.OUT)
+        GPIO.output(PIN_CS[:], 1)
+        GPIO.output(PIN_CLK[:], 1)
         rospy.loginfo("GPIO configuration enabled")
     except:
         rospy.loginfo("ERROR. Unable to setup the configuration requested")

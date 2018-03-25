@@ -1,2 +1,2 @@
-encoder_pos
+encoder_pos:motor_comms:tenseg_control
 -DCATKIN_DEVEL_PREFIX=/home/pi/tensegros/devel -DCMAKE_INSTALL_PREFIX=/home/pi/tensegros/install -G Unix Makefiles
