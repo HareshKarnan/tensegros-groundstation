@@ -1,0 +1,8 @@
+prefix=/home/haresh/tensegros/devel
+
+Name: motortest_station
+Description: Description of motortest_station
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/haresh/tensegros/devel/lib 
+Requires: 

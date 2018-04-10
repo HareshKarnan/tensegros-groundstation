@@ -1,8 +1,8 @@
-# Install script for directory: /home/pi/tensegros/src
+# Install script for directory: /home/haresh/tensegros/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pi/tensegros/install")
+  set(CMAKE_INSTALL_PREFIX "/home/haresh/tensegros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,7 +32,7 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   
       if (NOT EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
         file(MAKE_DIRECTORY "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
@@ -42,84 +42,82 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
       endif()
 endif()
 
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pi/tensegros/install/_setup_util.py")
+   "/home/haresh/tensegros/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pi/tensegros/install" TYPE PROGRAM FILES "/home/pi/tensegros/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/haresh/tensegros/install" TYPE PROGRAM FILES "/home/haresh/tensegros/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pi/tensegros/install/env.sh")
+   "/home/haresh/tensegros/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pi/tensegros/install" TYPE PROGRAM FILES "/home/pi/tensegros/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/haresh/tensegros/install" TYPE PROGRAM FILES "/home/haresh/tensegros/build/catkin_generated/installspace/env.sh")
 endif()
 
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pi/tensegros/install/setup.bash")
+   "/home/haresh/tensegros/install/setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pi/tensegros/install" TYPE FILE FILES "/home/pi/tensegros/build/catkin_generated/installspace/setup.bash")
+file(INSTALL DESTINATION "/home/haresh/tensegros/install" TYPE FILE FILES "/home/haresh/tensegros/build/catkin_generated/installspace/setup.bash")
 endif()
 
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pi/tensegros/install/setup.sh")
+   "/home/haresh/tensegros/install/setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pi/tensegros/install" TYPE FILE FILES "/home/pi/tensegros/build/catkin_generated/installspace/setup.sh")
+file(INSTALL DESTINATION "/home/haresh/tensegros/install" TYPE FILE FILES "/home/haresh/tensegros/build/catkin_generated/installspace/setup.sh")
 endif()
 
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pi/tensegros/install/setup.zsh")
+   "/home/haresh/tensegros/install/setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pi/tensegros/install" TYPE FILE FILES "/home/pi/tensegros/build/catkin_generated/installspace/setup.zsh")
+file(INSTALL DESTINATION "/home/haresh/tensegros/install" TYPE FILE FILES "/home/haresh/tensegros/build/catkin_generated/installspace/setup.zsh")
 endif()
 
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/pi/tensegros/install/.rosinstall")
+   "/home/haresh/tensegros/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/pi/tensegros/install" TYPE FILE FILES "/home/pi/tensegros/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/haresh/tensegros/install" TYPE FILE FILES "/home/haresh/tensegros/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pi/tensegros/build/gtest/cmake_install.cmake")
-  include("/home/pi/tensegros/build/encoder_pos/cmake_install.cmake")
-  include("/home/pi/tensegros/build/motor_comms/cmake_install.cmake")
-  include("/home/pi/tensegros/build/tenseg_control/cmake_install.cmake")
+  include("/home/haresh/tensegros/build/gtest/cmake_install.cmake")
+  include("/home/haresh/tensegros/build/motortest_station/cmake_install.cmake")
 
 endif()
 
@@ -131,5 +129,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pi/tensegros/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/haresh/tensegros/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
