@@ -1,0 +1,8 @@
+prefix=/home/haresh/tensegros/install
+
+Name: linearmodel
+Description: Description of linearmodel
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/haresh/tensegros/install/lib 
+Requires: 

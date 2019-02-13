@@ -24,3 +24,4 @@ if __name__ == '__main__':
         talker()
     except rospy.ROSInterruptException:
         rospy.loginfo("Closing motor_comms_test")
+

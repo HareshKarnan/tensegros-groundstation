@@ -1,2 +1,2 @@
-motortest_station
+linearmodel:motortest_station
 -DCATKIN_DEVEL_PREFIX=/home/haresh/tensegros/devel -DCMAKE_INSTALL_PREFIX=/home/haresh/tensegros/install -G Unix Makefiles
